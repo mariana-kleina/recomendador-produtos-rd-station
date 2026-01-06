@@ -1,5 +1,41 @@
 # Teste Técnico - Recomendador de Produtos RD Station
 
+## ✅ Implementação da Solução
+
+Esta seção descreve a solução implementada para o desafio técnico de Frontend da RD Station.
+
+## 🧠 Decisões Técnicas
+
+- A lógica de recomendação foi centralizada em um **service desacoplado do React** (`recommendation.service.js`), facilitando leitura, manutenção e testes.
+- O componente `Form` atua apenas como coletor de dados do usuário.
+- O componente `App` é responsável por orquestrar o fluxo da aplicação e decidir o tipo de recomendação (`SingleProduct` ou `MultipleProducts`).
+- Foi aplicada **normalização de strings** (case-insensitive e sem acentos) para evitar inconsistências entre dados vindos da interface e da API.
+- Em caso de empate na pontuação dos produtos, o **último produto válido** é priorizado, conforme os critérios de aceite.
+
+## ▶️ Execução Rápida
+
+```bash
+cd monorepo
+yarn install
+yarn dev
+```
+
+- Frontend: http://localhost:3000  
+- Backend (json-server): http://localhost:3001/products  
+
+## 🪟 Observação para Windows
+
+Em ambientes Windows, pode ser necessário instalar manualmente o pacote `concurrently`:
+
+```bash
+yarn add -D concurrently -W
+```
+
+---
+
+
+# Teste Técnico - Recomendador de Produtos RD Station
+
 Este projeto é parte do teste técnico para a vaga de desenvolvedor front-end na RD Station. O objetivo principal é implementar a lógica de recomendação de produtos RD Station em uma aplicação web existente.
 
 ## Missão
@@ -69,7 +105,7 @@ Para completar este teste, você deve concentrar-se principalmente em três arqu
 
 ## Como Executar
 
-1. Clone o repositório: `git clone <URL_DO_REPOSITORIO>`
+1. Clone o repositório: `git clone <https://github.com/mariana-kleina/recomendador-produtos-rd-station.git>`
 2. Instale as dependências: `yarn install`
 3. Para instalar o projeto, execute o script `./install.sh` 
 4. Inicie a aplicação: `yarn start`
@@ -95,7 +131,7 @@ Certifique-se de que todos os critérios de aceite são atendidos durante o dese
 
 ## Autor
 
-Desenvolvido por [Seu Nome]
+Desenvolvido por **Mariana Kleina**
 
 ## Licença
 
